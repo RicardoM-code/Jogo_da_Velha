@@ -8,4 +8,4 @@ Updates:
 
 upt1: Foi adicionado botão para limpar o tabuleiro.
 
-upt2: Foi adicionado contador de vitorias.
+upt2: Foi adicionado contador de vitórias.
