@@ -54,3 +54,15 @@ function isWin() {
     return false
 }
 
+function clearGame() {
+    playerTime = 0;
+    board = ['', '', '', '', '', '', '', '', ''];
+    gameOver = false;
+
+    let squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+        square.innerHTML = '';
+    });
+
+
+}
