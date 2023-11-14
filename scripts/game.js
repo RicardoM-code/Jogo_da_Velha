@@ -2,6 +2,7 @@ let board = ['', '', '', '', '', '', '', '', '']
 let playerTime = 0
 let symbols = ['o', 'x']
 let gameOver = false
+let playerWins = [0, 0];
 
 let winStates = [
     [0, 1, 2],
@@ -27,6 +28,10 @@ function handleMove(position) {
 
         if (gameOver == false) {
             playerTime = (playerTime == 0) ? 1 : 0
+        }
+        else{
+            playerWins[playerTime]++;
+            updateScore()
         }
     }
     return gameOver
@@ -65,4 +70,12 @@ function clearGame() {
     });
 
 
+}
+
+function updateScore(){
+    let scorePlayer0 = document.getElementById('scorePlayer0')
+    let scorePlayer1 = document.getElementById('scorePlayer1')
+
+    scorePlayer0.textContent = `Jogador 1 tem ${playerWins[0]} vitórias!`
+    scorePlayer1.textContent = `Jogador 2 tem ${playerWins[1]} vitórias!`
 }
